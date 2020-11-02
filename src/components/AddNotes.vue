@@ -92,7 +92,7 @@ export default {
           completed: false
           })
           .then(() => {
-            this.$router.push({ name: 'Notes' })
+            this.$router.go({ name: 'Notes' })
           });
       }
     },
