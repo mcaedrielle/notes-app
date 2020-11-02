@@ -32,16 +32,17 @@
             dark
             v-bind="attrs"
             v-on="on"
+            v-if="isLoggedIn"
           >
             Notes
           <v-icon right>mdi-arrow-down-thick</v-icon>
           </v-btn>
         </template>
         <v-list>
-          <v-list-item v-if="isLoggedIn">
+          <v-list-item>
             <router-link to="/pending">Show Pending Notes</router-link>
           </v-list-item>
-          <v-list-item v-if="isLoggedIn">
+          <v-list-item>
               <router-link to="/completed">Show Completed Notes</router-link>
           </v-list-item>
         </v-list>
