@@ -57,6 +57,7 @@
 import { db } from "../firebase/db";
 
 export default {
+  name: "Notes",
   data() {
     return {
       Notes: [],

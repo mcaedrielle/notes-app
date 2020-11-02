@@ -1,24 +1,19 @@
 <template>
   <v-container class="top-container">
-    <v-tooltip left>
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          v-if="$route.name === 'Notes'"
-          fab
-          fixed
-          right
-          bottom
-          @click="openAddNotes"
-          class="top-btn default-font"
-          color="primary"
-          v-bind="attrs"
-          v-on="on"
-          >
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
-      </template>
-      <span>Add Notes</span>
-    </v-tooltip>
+    <v-btn
+      v-if="$route.name === 'Notes'"
+      fab
+      fixed
+      right
+      bottom
+      @click="openAddNotes"
+      class="top-btn default-font"
+      color="primary"
+      v-bind="attrs"
+      v-on="on"
+      >
+      <v-icon>mdi-plus</v-icon>
+    </v-btn>
   </v-container>
 </template>
 
@@ -27,7 +22,7 @@ export default {
   name: "ContentTop",
   methods: {
     openAddNotes() {
-      this.$router.go({ path: '/add-notes' })
+      this.$router.push({ path: '/add-notes' })
     },
   }
 };
